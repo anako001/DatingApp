@@ -11,7 +11,7 @@ namespace API.Data
             var userName = string.Empty;
             var userFaker = new Faker<AppUser>()
             .RuleFor(u => u.Id, _ => userId++)
-            .RuleFor(u => u.UserName, _ => userName);
+            .RuleFor(u => u.UserName, f => f.Internet.UserName());
 
             var users = userFaker.Generate(1000);
             return users;

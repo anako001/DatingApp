@@ -33,10 +33,10 @@ namespace API.Controllers
         public async Task<ActionResult> CreateUsers()
         {
             //Initial Seed
-            //var fakeusers = new FakeUsers();
-            //var users = fakeusers.GetAppUsers();
-            //await _context.Users.AddRangeAsync(users);
-            //await _context.SaveChangesAsync();
+            var fakeusers = new FakeUsers();
+            var users = fakeusers.GetAppUsers();
+            await _context.Users.AddRangeAsync(users);
+            await _context.SaveChangesAsync();
             return Ok();
         }
     }
