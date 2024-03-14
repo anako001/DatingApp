@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
         this.users = res;
       },
       error: error => console.log(error),
-      complete: () => console.log("Completed")
     });
   }
 

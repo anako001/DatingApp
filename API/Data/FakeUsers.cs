@@ -13,7 +13,7 @@ namespace API.Data
             .RuleFor(u => u.Id, _ => userId++)
             .RuleFor(u => u.UserName, f => f.Internet.UserName());
 
-            var users = userFaker.Generate(1000);
+            var users = userFaker.Generate(100);
             return users;
         }
     }
